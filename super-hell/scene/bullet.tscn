@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdqnvltpei4ba"]
+
+[ext_resource type="Script" uid="uid://c361yj4badn4p" path="res://scene/bullet.gd" id="1_qwydi"]
+
+[sub_resource type="Gradient" id="Gradient_dmi07"]
+offsets = PackedFloat32Array(0, 0.5123457, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.6111111, 0.6111111, 0.6111111, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7g0b6"]
+gradient = SubResource("Gradient_dmi07")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukt71"]
+size = Vector2(87, 10)
+
+[node name="Bullet" type="CharacterBody2D"]
+script = ExtResource("1_qwydi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.5, -0.124969006)
+scale = Vector2(0.34765628, 9.75)
+texture = SubResource("GradientTexture1D_7g0b6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ukt71")
+
+[node name="Destroy" type="Timer" parent="."]
+wait_time = 4.0
