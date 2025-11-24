@@ -1,0 +1,7 @@
+res://scene/Player.tscn
+res://scene/player.gd
+res://scene/level.tscn
+res://scene/Projectile.gd
+res://scene/Main.gd
+res://scene/bullet.tscn
+res://scene/bullet.gd
